@@ -1,0 +1,47 @@
+main {
+  padding: 1rem;
+  margin-top: 5rem;
+}
+@media (min-width: 900px) {
+  main {
+    margin-inline-start: 6rem;
+    // margin-top: unset;
+  }
+}
+
+.Wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+.Header {
+  display: flex;
+  justify-content: space-between;
+  .Title {
+    margin-bottom: 0.5rem;
+  }
+  .SubTitle {
+    transition: color 0.3s ease 0s;
+    color: #888eb0;
+    font-size: 0.75rem;
+    line-height: 1.125;
+    letter-spacing: -0.25px;
+  }
+}
+
+.RightWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.IconWrapper {
+  display: inline-flex;
+  margin-right: 0.5rem;
+  padding: 0.425rem;
+  background: white;
+  border-radius: 50%;
+  img {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+}

@@ -1,0 +1,21 @@
+.Checkbox {
+  display: flex;
+  align-items: center;
+  &:hover .Check {
+    border-color: var(--primary);
+  }
+  .Check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    margin-inline-end: 0.7rem;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: rgb(223, 227, 250);
+    &.checked {
+      background-color: var(--primary);
+    }
+  }
+}
