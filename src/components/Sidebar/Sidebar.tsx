@@ -4,12 +4,16 @@ import Logo from "../Logo/Logo";
 import sunIcon from "../../assets/icons/icon-sun.svg";
 import avatarIcon from "../../assets/icons/avatar.svg";
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  toggleTheme: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ toggleTheme }) => {
   return (
     <aside className={classes.Sidebar}>
       <Logo />
       <div className={classes.Wrapper}>
-        <button className={classes.ThemeToggler}>
+        <button onClick={toggleTheme} className={classes.ThemeToggler}>
           <img src={sunIcon} alt="sun icon" />
         </button>
         <div className={classes.Divider}></div>

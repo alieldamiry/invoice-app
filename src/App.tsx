@@ -3,11 +3,17 @@ import classes from "./App.module.scss";
 import Button from "./components/Button/Button";
 import IconPlus from "./assets/icons/icon-plus.svg";
 import Dropdown from "./components/Dropdown/Dropdown";
+import { useState } from "react";
 
 const App = () => {
+  const [isDark, setIsDark] = useState(false);
+  const toggleTheme = () => {
+    setIsDark((p) => !p);
+  };
+
   return (
-    <div className={classes.App}>
-      <Sidebar />
+    <div className={`${classes.App} ${isDark && classes.isDark}`}>
+      <Sidebar toggleTheme={toggleTheme} />
       <main>
         <div className={classes.Wrapper}>
           <div className={classes.Header}>

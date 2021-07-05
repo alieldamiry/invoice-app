@@ -11,6 +11,8 @@
         span {
             margin-inline-end: 1rem;
             font-weight: bold;
+            color: var(--text-color);
+            transition: var(--timing-animation);
         }
     }
 }
@@ -29,8 +31,8 @@
     transform: translateX(-50%);
     width: 10rem;
     border-radius: 8px;
-    padding: 1rem 1.5rem;
-    background: white;
+    padding: 1.5rem 1.5rem 1rem;
+    background: var(--secondary-bg);
     box-shadow: rgba(72px, 84px, 159px, 0.25) 0px 10px 20px;
     transition: box-shadow 0.3s ease 0s, background 0.3s ease 0s;
 }

@@ -1,7 +1,23 @@
+:root {
+  --primary: #7c5dfa;
+  --primary-light: #9277ff;
+  --text-color: #0c0e16;
+  --main-bg: #f8f8fb;
+  --secondary-bg: #fff;
+  --timing-animation: 0.2s;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--main-bg);
+  transition: var(--timing-animation);
+  &.isDark {
+    --secondary-bg: #1e2139;
+    --main-bg: #141625;
+    --text-color: #f4f4ff;
+  }
 }
 
 main {
@@ -28,6 +44,8 @@ main {
   justify-content: space-between;
   .Title {
     margin-bottom: 0.5rem;
+    transition: var(--timing-animation);
+    color: var(--text-color);
   }
   .SubTitle {
     transition: color 0.3s ease 0s;

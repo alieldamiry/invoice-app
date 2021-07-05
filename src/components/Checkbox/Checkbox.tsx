@@ -1,25 +1,38 @@
-import { useState } from "react";
+// import { useState } from "react";
 import classes from "./Checkbox.module.scss";
 import checkmark from "../../assets/icons/icon-check.svg";
 
 interface CheckboxProps {
-  label: string;
+  id: number;
+  checked: boolean;
+  onChange: (id: number) => void;
+  children: string;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ label }) => {
-  const [state, setState] = useState(false);
+const Checkbox: React.FC<CheckboxProps> = ({
+  id,
+  checked,
+  onChange,
+  children,
+}) => {
+  // const [state, setState] = useState(false);
 
-  const handleCheck = () => {
-    setState((prevState) => !prevState);
-  };
+  // const handleCheck = () => {
+  //   setState((prevState) => !prevState);
+  // };
 
   return (
-    <button className={classes.Checkbox} onClick={handleCheck}>
-      <span className={`${classes.Check} ${state && classes.checked}`}>
-        {state && <img src={checkmark} alt="check mark" />}
+    <label className={classes.Checkbox}>
+      <input
+        onChange={() => onChange(id)}
+        type="checkbox"
+        checked={checked}
+      />
+      <span className={classes.Box}>
+        <img src={checkmark} alt="" />
       </span>
-      <div>{label}</div>
-    </button>
+      <span>{children}</span>
+    </label>
   );
 };
 
