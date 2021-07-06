@@ -1,0 +1,13 @@
+.FormWrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 35rem;
+    padding-inline-start: 4rem;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: var(--main-bg);
+}
+.Form {
+    padding: 3.5rem 2rem 0px 3.5rem;
+}

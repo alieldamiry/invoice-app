@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div className={`${classes.App} ${isDark && classes.isDark}`}>
-      <Sidebar toggleTheme={toggleTheme} />
+      <Sidebar toggleTheme={toggleTheme} isDark={isDark} />
       <main>
         <div className={classes.Wrapper}>
           <div className={classes.Header}>
