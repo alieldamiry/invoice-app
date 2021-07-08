@@ -1,8 +1,14 @@
 import classes from "./Button.module.scss";
 
-const Button: React.FC = ({ children }) => {
+
+interface ButtonInterface {
+  variant:string
+}
+const Button: React.FC<ButtonInterface> = ({ children, variant }) => {
+  console.log(variant);
+  
   return (
-    <button className={`${classes.Button}`}>
+    <button className={`${classes.Button} ${classes[variant]}`}>
       {children}
     </button>
   );

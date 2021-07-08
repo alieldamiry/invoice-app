@@ -1,7 +1,9 @@
 import classes from "./Form.module.scss";
 import Input from "./Input";
 import { FormGrid3, FormGrid2 } from "./FormGrid";
-import Select from './Select';
+import Select from "./Select";
+import Button from "../Button/Button";
+import ItemList from './ItemList/ItemList';
 
 const Form = () => {
   return (
@@ -41,10 +43,22 @@ const Form = () => {
                   <option value="">3</option>
                 </Select>
               </FormGrid2>
-                <Input id="Description" label="Description" placeholder="e.g. Graphic Design Service" type="text" />
+              <Input
+                id="Description"
+                label="Description"
+                placeholder="e.g. Graphic Design Service"
+                type="text"
+              />
+
+            </div>
+            <div>
+              <h2 className={classes.ItemListTitle}>Item List</h2>
+              <ItemList />
             </div>
           </div>
-        
+          <div>
+            <Button variant="primary">save & send</Button>
+          </div>
         </form>
       </div>
       <div className={classes.Backdrop}></div>

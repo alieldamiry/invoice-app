@@ -1,0 +1,9 @@
+.Title {
+    color: var(--text-color);
+}
+
+.Wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr min-content;
+    grid-gap: 1rem;
+}

@@ -23,7 +23,7 @@ const App = () => {
             </div>
             <div className={classes.RightWrapper}>
               <Dropdown />
-              <Button>
+              <Button variant="primary">
                 <span className={classes.IconWrapper}>
                   <img src={IconPlus} alt="icon plus" />
                 </span>
