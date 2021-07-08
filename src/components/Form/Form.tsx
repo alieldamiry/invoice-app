@@ -3,9 +3,15 @@ import Input from "./Input";
 import { FormGrid3, FormGrid2 } from "./FormGrid";
 import Select from "./Select";
 import Button from "../Button/Button";
-import ItemList from './ItemList/ItemList';
+import ItemList from "./ItemList/ItemList";
+import { useState } from "react";
 
 const Form = () => {
+  const [itemLists, setItemLists] = useState([{
+    id: 1,
+    quantity: 1,
+    price: 110,
+  }]);
   return (
     <>
       <div className={classes.FormWrapper}>
@@ -49,11 +55,11 @@ const Form = () => {
                 placeholder="e.g. Graphic Design Service"
                 type="text"
               />
-
             </div>
             <div>
               <h2 className={classes.ItemListTitle}>Item List</h2>
-              <ItemList />
+              {itemLists.map(item => <ItemList quantity={item.quantity} price={item.price} />)}
+              
             </div>
           </div>
           <div>

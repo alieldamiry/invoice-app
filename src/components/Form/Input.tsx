@@ -7,12 +7,25 @@ interface inputProps {
   type: string;
   label: string;
   placeholder?: string;
+  readOnly?: boolean;
 }
-const Input: React.FC<inputProps> = ({ id, type, label, placeholder }) => {
+const Input: React.FC<inputProps> = ({
+  id,
+  type,
+  label,
+  placeholder,
+  readOnly,
+}) => {
   return (
     <FormGroup>
       <label htmlFor={id}>{label}</label>
-      <input type={type} id={id} className={classes.FormControl} placeholder={placeholder} />
+      <input
+        type={type}
+        id={id}
+        className={classes.FormControl}
+        placeholder={placeholder}
+        readOnly={readOnly}
+      />
     </FormGroup>
   );
 };

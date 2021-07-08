@@ -1,9 +1,32 @@
 .Title {
-    color: var(--text-color);
+  color: var(--text-color);
+}
+
+.DeleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  img {
+    width: 20px;
+  }
 }
 
 .Wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr min-content;
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr min-content;
+  grid-gap: 1rem;
+  & > div:last-of-type {
+    align-self: center;
+  }
+  & > div:first-of-type {
+    grid-column: 1/-1;
+  }
+  @media (min-width: 600px) {
+    & {
+      grid-template-columns: 1fr 1fr 1fr 1fr min-content;
+    }
+    & > div:first-of-type {
+      grid-column: unset;
+    }
+  }
 }
